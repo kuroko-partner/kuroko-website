@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店舗集客・IT伴走サポート | 黒子パートナー 佐浦奈美</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        round: ['"Zen Maru Gothic"', 'sans-serif'],
+                    },
+                    colors: {
+                        // 黒子としての温かみと信頼感を表すブラウン系のテーマカラー
+                        brand: {
+                            50: '#fcfaf8',
+                            100: '#f5f0eb',
+                            500: '#b89470',
+                            700: '#8c6b4a',
+                            900: '#4a3826',
+                        },
+                        accent: '#e67e22' // 目立たせるためのアクセントカラー（オレンジ系）
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; color: #333; }
+        .font-round { font-family: 'Zen Maru Gothic', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-brand-50">
 
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-round font-bold text-brand-900 text-xl">黒子ITパートナー</div>
+            <a href="#contact" class="bg-brand-700 text-white px-4 py-2 rounded-full text-sm font-bold shadow hover:bg-brand-900 transition">無料相談はこちら</a>
+        </div>
+    </header>
+
+    <section class="pt-28 pb-16 px-6 text-center max-w-4xl mx-auto">
+        <p class="text-accent font-bold tracking-widest text-sm mb-4">旭川の美容室・サロンオーナー様へ</p>
+        <h1 class="font-round text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-brand-900 mb-6">
+            毎月〇万円の広告費、<br>いつまで払い続けますか？
+        </h1>
+        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-10">
+            「掲載料が重い」「割引目当ての新規ばかりで利益が残らない」<br class="hidden md:block">
+            そんなお悩みを、予約手数料ゼロの「自社システム」で解決します。
+        </p>
+        <div class="bg-white p-6 rounded-2xl shadow-lg border border-brand-100 max-w-2xl mx-auto">
+            <h2 class="font-round text-xl font-bold text-brand-900 mb-4 border-b pb-2">こんなお悩み、ありませんか？</h2>
+            <ul class="text-left space-y-3 text-gray-700">
+                <li><i class="fa-solid fa-check text-accent mr-2"></i> 施術中に電話が鳴って、お客様から手を離してしまう</li>
+                <li><i class="fa-solid fa-check text-accent mr-2"></i> 営業時間外のLINEやDMでの日程調整がしんどい</li>
+                <li><i class="fa-solid fa-check text-accent mr-2"></i> ITやシステムが苦手で、何から始めればいいか分からない</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="py-16 bg-brand-100 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-round text-2xl md:text-3xl font-bold text-center text-brand-900 mb-12">
+                システムを買うな、自立する力を買え。
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl text-brand-700">
+                        <i class="fa-brands fa-line"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">手数料¥0の自社予約</h3>
+                    <p class="text-sm text-gray-600">お客様が24時間いつでも自動で予約できる公式LINEを構築。あなたは「次からこれで予約してね」と声をかけるだけです。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl text-brand-700">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">完全なる「黒子」サポート</h3>
+                    <p class="text-sm text-gray-600">IT音痴でも大丈夫。最初は私が設定をすべて巻き取ります。現場で奮闘するオーナー様の葛藤に寄り添い、裏方として伴走します。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl text-brand-700">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">目標は「半年後の卒業」</h3>
+                    <p class="text-sm text-gray-600">すべてを丸投げさせて一生経費をもらうことはしません。月1回の作戦会議で数字を読み解く力を育て、自分で集客できる状態を目指します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-round text-2xl font-bold text-center text-brand-900 mb-10">導入実績と圧倒的な成果</h2>
+            <div class="bg-white border-2 border-brand-700 rounded-2xl p-6 md:p-10 shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-brand-700 text-white text-xs font-bold px-4 py-1 rounded-bl-lg">旭川市 ヘアーバズール様</div>
+                <h3 class="font-bold text-xl mb-6">ポータルサイト依存からの脱却に成功！</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-brand-50 p-4 rounded-lg">
+                        <p class="text-sm text-gray-500 font-bold mb-1">【時間】電話対応・台帳転記の削減</p>
+                        <p class="text-2xl font-black text-brand-900">年間 約<span class="text-4xl text-accent">180</span>時間の創出</p>
+                    </div>
+                    <div class="bg-brand-50 p-4 rounded-lg">
+                        <p class="text-sm text-gray-500 font-bold mb-1">【コスト】集客サイト費用の削減</p>
+                        <p class="text-2xl font-black text-brand-900">年間 約<span class="text-4xl text-accent">40</span>万円の削減</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    公式LINEからの予約動線を確立し、ブロック数0件を維持。SNSからのホームページへのアクセスも急増し、「認知から予約へ」の完全な自動化を実現。オーナー様は本来の施術に100%集中できる環境を手に入れました。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-6 bg-brand-900 text-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="font-round text-2xl font-bold mb-8">まずは、現場の「困った」をお聞かせください</h2>
+            
+            <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-xl mb-8">
+                <div class="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                    <img src="https://via.placeholder.com/150?text=Photo" alt="佐浦奈美" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-round text-xl font-bold text-brand-900 mb-2">黒子パートナー 佐浦 奈美</h3>
+                <p class="text-sm text-gray-600 mb-8 leading-relaxed text-left">
+                    システムを作るだけならAIにもできます。しかし、現場のパニックに寄り添い、泥臭く立て直すことは人間にしかできません。あなたが本来の業務（施術や接客）に100%集中できるよう、裏方のシステム周りを完全に自動化し、全力で支えさせていただきます。
+                </p>
+
+                <div class="bg-brand-50 p-6 rounded-xl border border-brand-100">
+                    <p class="font-bold text-brand-900 mb-4">＼ 無料相談を受付中です ／</p>
+                    <a href="tel:08018776307" class="block text-2xl font-black text-brand-700 hover:text-brand-900 transition mb-4">
+                        <i class="fa-solid fa-phone mr-2"></i>080-1877-6307
+                    </a>
+                    <a href="#" class="inline-block bg-[#06C755] text-white font-bold py-4 px-8 md:px-12 rounded-full shadow-lg hover:scale-105 transition duration-300">
+                        <i class="fa-brands fa-line mr-2 text-xl"></i>LINEで気軽に相談する
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-center py-6 text-gray-400 text-xs">
+        <p>&copy; 2026 Nami Saura. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
