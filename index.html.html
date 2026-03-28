@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店舗集客・IT伴走サポート | 黒子パートナー 佐浦奈美</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        round: ['"Zen Maru Gothic"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fcfaf8',
+                            100: '#f5f0eb',
+                            500: '#b89470',
+                            700: '#8c6b4a',
+                            900: '#4a3826',
+                        },
+                        accent: '#e67e22'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; color: #333; }
+        .font-round { font-family: 'Zen Maru Gothic', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "旭川市の美容室「ヘアーバズール」様における予約自動化と集客導線の構築事例",
+      "description": "北海道旭川市東光で一人経営を行う美容室にて、猛吹雪時の当日キャンセルリスクにも対応する自社予約システムを構築。年間180時間の創出と40万円のコスト削減を実現しました。",
+      "author": {
+        "@type": "Person",
+        "name": "佐浦奈美",
+        "sameAs": "https://lin.ee/27hUkt4"
+      },
+      "about": {
+        "@type": "HairSalon",
+        "name": "ヘアーバズール",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "東光5条6-3-5",
+          "addressLocality": "旭川市",
+          "addressRegion": "北海道",
+          "postalCode": "078-8345",
+          "addressCountry": "JP"
+        }
+      },
+      "associatedMedia": [
+         {
+           "@type": "ImageObject",
+           "url": "./images/asahikawa-system-admin.png",
+           "caption": "旭川の猛吹雪時にも即座に対応可能な、緊急停止（ADMIN）機能"
+         },
+         {
+           "@type": "ImageObject",
+           "url": "./images/salon-empty-slot-tetris.png",
+           "caption": "突発的なキャンセルを埋める「空き枠テトリス機能」と予約割合のデータ分析"
+         },
+         {
+           "@type": "ImageObject",
+           "url": "./images/instagram-tracking-approval.png",
+           "caption": "Instagram流入の計測と顧客カルテを統合した、現場負担ゼロの承認制システム"
+         },
+         {
+           "@type": "ImageObject",
+           "url": "./images/frictionless-review-request.png",
+           "caption": "施術後の口コミ獲得を摩擦ゼロで実現するサンキューメール自動送信機能"
+         }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-brand-50">
+
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-round font-bold text-brand-900 text-xl">黒子ITパートナー</div>
+            <a href="#contact" class="bg-brand-700 text-white px-4 py-2 rounded-full text-sm font-bold shadow hover:bg-brand-900 transition">無料相談はこちら</a>
+        </div>
+    </header>
+
+    <section class="pt-28 pb-16 px-6 text-center max-w-4xl mx-auto">
+        <p class="text-accent font-bold tracking-widest text-sm mb-4">旭川の美容室・サロンオーナー様へ</p>
+        <h1 class="font-round text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-brand-900 mb-6">
+            毎月〇万円の広告費、<br>いつまで払い続けますか？
+        </h1>
+        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-10">
+            「掲載料が重い」「割引目当ての新規ばかりで利益が残らない」<br class="hidden md:block">
+            そんなお悩みを、予約手数料ゼロの「自社システム」で解決します。
+        </p>
+        <div class="bg-white p-6 rounded-2xl shadow-lg border border-brand-100 max-w-2xl mx-auto">
+            <h2 class="font-round text-xl font-bold text-brand-900 mb-4 border-b pb-2">こんなお悩み、ありませんか？</h2>
+            <ul class="text-left space-y-3 text-gray-700">
+                <li><i class="fa-solid fa-check text-accent mr-2"></i> 施術中に電話が鳴って、お客様から手を離してしまう</li>
+                <li><i class="fa-solid fa-check text-accent mr-2"></i> 営業時間外のLINEやDMでの日程調整がしんどい</li>
+                <li><i class="fa-solid fa-check text-accent mr-2"></i> ITやシステムが苦手で、何から始めればいいか分からない</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="py-16 bg-brand-100 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-round text-2xl md:text-3xl font-bold text-center text-brand-900 mb-12">
+                システムを買うな、自立する力を買え。
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl text-brand-700">
+                        <i class="fa-brands fa-line"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">手数料¥0の自社予約</h3>
+                    <p class="text-sm text-gray-600">お客様が24時間いつでも自動で予約できる公式LINEを構築。あなたは「次からこれで予約してね」と声をかけるだけです。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl text-brand-700">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">完全なる「黒子」サポート</h3>
+                    <p class="text-sm text-gray-600">IT音痴でも大丈夫。最初は私が設定をすべて巻き取ります。現場で奮闘するオーナー様の葛藤に寄り添い、裏方として伴走します。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl text-brand-700">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">目標は「半年後の卒業」</h3>
+                    <p class="text-sm text-gray-600">すべてを丸投げさせて一生経費をもらうことはしません。月1回の作戦会議で数字を読み解く力を育て、自分で集客できる状態を目指します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold tracking-widest text-sm mb-2 block">PROVEN RESULTS</span>
+                <h2 class="font-round text-3xl md:text-4xl font-bold text-brand-900 mb-4">導入実績と「実証された」ソリューション</h2>
+                <p class="text-gray-600">現場のパニックをなくし、雪国・旭川の過酷な環境でも安定した経営を実現。</p>
+            </div>
+
+            <div class="bg-brand-50 rounded-3xl p-8 md:p-12 shadow-sm border border-brand-100 relative mb-16">
+                <div class="absolute top-0 right-0 bg-brand-700 text-white text-sm font-bold px-6 py-2 rounded-bl-2xl rounded-tr-3xl">
+                    旭川市東光・美容室 ヘアーバズール様
+                </div>
+                
+                <h3 class="font-round text-2xl md:text-3xl font-bold text-brand-900 mb-8 mt-4 leading-tight">
+                    一人経営サロンの「ネット集客・予約自動化」<br class="hidden md:block">
+                    大手ポータル依存からの完全脱却
+                </h3>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm text-center mb-12 border border-gray-100">
+                    <h4 class="font-bold text-brand-900 mb-6 tracking-widest text-sm">SYSTEM ROI - 導入後の成果</h4>
+                    <div class="grid md:grid-cols-3 gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                        <div class="py-4 md:py-0">
+                            <p class="text-sm text-gray-500 font-bold mb-2">【時間】電話対応・台帳転記の削減</p>
+                            <p class="text-brand-900 font-black">年間 約<span class="text-4xl md:text-5xl text-accent mx-1">180</span>時間創出</p>
+                        </div>
+                        <div class="py-4 md:py-0">
+                            <p class="text-sm text-gray-500 font-bold mb-2">【コスト】集客サイト費用の削減</p>
+                            <p class="text-brand-900 font-black">年間 約<span class="text-4xl md:text-5xl text-accent mx-1">40</span>万円削減</p>
+                        </div>
+                        <div class="py-4 md:py-0">
+                            <p class="text-sm text-gray-500 font-bold mb-2">【集客力】認知から予約の自動化</p>
+                            <p class="text-brand-900 font-black leading-tight text-lg mt-2">
+                                Googleマップアクセス<br><span class="text-2xl text-accent">月間16件増</span><br>
+                                LINEお友だち<span class="text-2xl text-accent">20名増</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-12">
+                    <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-6 rounded-2xl shadow-sm">
+                        <div class="order-2 md:order-1">
+                            <div class="flex gap-4 mb-4">
+                                <img src="./images/asahikawa-system-admin.png" alt="稼働中（緊急停止）ボタン" class="w-1/3 rounded shadow-sm border border-gray-200 object-contain">
+                                <img src="./images/instagram-tracking-approval.png" alt="顧客カルテと承認ボタン" class="w-1/2 rounded shadow-sm border border-gray-200 object-contain">
+                            </div>
+                        </div>
+                        <div class="order-1 md:order-2">
+                            <h4 class="font-bold text-xl text-brand-900 mb-3 flex items-center"><i class="fa-solid fa-user-shield text-accent mr-2"></i> 1タップ「承認制」と緊急停止機能</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                予約は即時確定せず、オーナー様が「承認」して初めて確定する安全装置。<strong class="text-brand-900">冬道特有の渋滞によるお客様の遅刻</strong>など、イレギュラーな事態でも予約被りのパニックを防ぎます。また、<strong class="text-brand-900">猛吹雪時など想定外の事態</strong>には「緊急停止ボタン」で即座に予約受付を停止できます。
+                            </p>
+                            <p class="text-xs text-gray-500"><i class="fa-solid fa-circle-check text-green-500 mr-1"></i> Instagramからの流入経路も自動計測。</p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-6 rounded-2xl shadow-sm">
+                        <div>
+                            <h4 class="font-bold text-xl text-brand-900 mb-3 flex items-center"><i class="fa-solid fa-calendar-check text-accent mr-2"></i> 空き枠テトリス機能</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                システムが自動で空き時間を見つけ出し、Instagram用の募集文を1秒で生成。<strong class="text-brand-900">ホワイトアウト等の悪天候による突発的な当日キャンセル</strong>という雪国特有の機会損失を瞬時にリカバリーします。メニュー別の予約割合データも自動集計し、次の一手を明確にします。
+                            </p>
+                        </div>
+                        <div>
+                             <img src="./images/salon-empty-slot-tetris.png" alt="テトリスモードと予約割合グラフ" class="w-full rounded shadow-sm border border-gray-200 object-contain">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-6 rounded-2xl shadow-sm">
+                        <div class="order-2 md:order-1 flex justify-center">
+                            <img src="./images/frictionless-review-request.png" alt="サンキューメールと口コミ獲得画面" class="w-2/3 rounded shadow-sm border border-gray-200 object-contain">
+                        </div>
+                        <div class="order-1 md:order-2">
+                            <h4 class="font-bold text-xl text-brand-900 mb-3 flex items-center"><i class="fa-solid fa-star text-accent mr-2"></i> 摩擦ゼロの口コミ獲得（GBP連動）</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                施術終了後、ワンタップでサンキューメールとGoogleマップ（GBP）への口コミ投稿依頼を自動送信。「口コミを書いてください」と直接お願いする心理的負担をゼロにし、自然な形で良質なレビューを集める「黄金の導線」を確立します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-6 bg-brand-900 text-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="font-round text-2xl font-bold mb-8">まずは、現場の「困った」をお聞かせください</h2>
+            
+            <div class="bg-white text-gray-800 p-10 rounded-3xl shadow-2xl mb-8 relative overflow-hidden">
+                <div class="w-28 h-28 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg relative z-10">
+                    <img src="https://via.placeholder.com/150?text=Photo" alt="佐浦奈美" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-round text-2xl font-bold text-brand-900 mb-3 relative z-10">黒子パートナー 佐浦 奈美</h3>
+                <p class="text-sm md:text-base text-gray-600 mb-10 leading-relaxed text-left relative z-10">
+                    システムを作るだけならAIにもできます。しかし、現場のパニックに寄り添い、泥臭く立て直すことは人間にしかできません。あなたが本来の業務（施術や接客）に100%集中できるよう、裏方のシステム周りを完全に自動化し、全力で支えさせていただきます。
+                </p>
+
+                <div class="bg-brand-50 p-8 rounded-2xl border-2 border-green-500/20 relative z-10">
+                    <p class="font-bold text-brand-900 mb-6 text-lg">＼ まずはLINEで現状をご相談ください ／</p>
+                    
+                    <a href="https://lin.ee/27hUkt4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#06C755] text-white font-bold py-5 px-8 md:px-12 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 w-full md:w-auto text-lg md:text-xl">
+                        <i class="fa-brands fa-line mr-3 text-3xl"></i>LINEで気軽に相談する
+                    </a>
+                    <p class="text-xs text-gray-500 mt-4">※24時間受付中。メッセージは私（佐浦）に直接届きます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-center py-8 text-gray-400 text-xs">
+        <p>&copy; 2026 Nami Saura. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
